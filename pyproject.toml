@@ -1,0 +1,54 @@
+[project]
+name = "cus-core"
+version = "0.1.0"
+description = "Caste Unity System — agent grading framework with intent-adherence scoring and expected-failure rewards"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "Apache-2.0" }
+authors = [
+    { name = "StellarRequiem" },
+]
+keywords = ["agents", "evaluation", "grading", "llm", "audit"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+dependencies = [
+    "pydantic>=2.8",
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+ollama = ["ollama>=0.4"]
+anthropic = ["anthropic>=0.40"]
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.23",
+    "ruff>=0.8",
+    "mypy>=1.11",
+]
+
+[project.urls]
+Homepage = "https://github.com/StellarRequiem/cus-core"
+Repository = "https://github.com/StellarRequiem/cus-core"
+Issues = "https://github.com/StellarRequiem/cus-core/issues"
+
+[build-system]
+requires = ["uv_build>=0.5"]
+build-backend = "uv_build"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W", "UP", "B", "SIM", "RUF"]
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]

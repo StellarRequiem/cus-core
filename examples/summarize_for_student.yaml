@@ -1,0 +1,43 @@
+id: summarize_for_student
+description: >
+  Read the provided file and produce a summary that a high-school student
+  could follow — plain language, concrete examples where useful, no jargon
+  unless it is defined in the same sentence.
+expected_outcome: >
+  A ~200-word summary that captures the main argument and the top 3
+  supporting points, using no terminology that requires prior domain knowledge.
+expected_failure: false
+
+stages:
+  - name: plan
+    grader_model: "ollama:qwen2.5:3b"
+    temperature: 0.0
+    rubrics:
+      - name: scope
+        weight: 0.5
+        question: "Does the plan identify the main argument and supporting points?"
+      - name: audience_fit
+        weight: 0.5
+        question: "Does the plan explicitly account for the student audience?"
+
+  - name: execute
+    grader_model: "ollama:qwen2.5:3b"
+    temperature: 0.0
+    rubrics:
+      - name: accuracy
+        weight: 0.4
+        question: "Does the summary faithfully represent the source?"
+      - name: readability
+        weight: 0.4
+        question: "Would a typical high-school student follow this without help?"
+      - name: brevity
+        weight: 0.2
+        question: "Is the summary close to 200 words (within +/- 50)?"
+
+  - name: assess
+    grader_model: "anthropic:claude-haiku-4-5"
+    temperature: 0.0
+    rubrics:
+      - name: overall_quality
+        weight: 1.0
+        question: "Taking the source and student audience into account, is this a good summary?"
