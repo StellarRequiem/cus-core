@@ -4,7 +4,7 @@ from pathlib import Path
 
 import pytest
 
-from cus_core.task_loader import load_task, load_task_from_string
+from cus.task_loader import load_task, load_task_from_string
 
 
 VALID_YAML = """

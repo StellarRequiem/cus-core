@@ -3,7 +3,7 @@
 import pytest
 from pydantic import ValidationError
 
-from cus_core.models import GradeResult, Rubric, Stage, StageName, StageResult, Task
+from cus.models import GradeResult, Rubric, Stage, StageName, StageResult, Task
 
 
 def _valid_stage() -> Stage:

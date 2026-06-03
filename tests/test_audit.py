@@ -5,7 +5,7 @@ from pathlib import Path
 
 import pytest
 
-from cus_core.audit import AuditChain, AuditEvent
+from cus.audit import AuditChain, AuditEvent
 
 
 def test_empty_chain_verifies(tmp_path: Path):

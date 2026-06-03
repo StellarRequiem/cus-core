@@ -2,8 +2,8 @@
 
 import pytest
 
-from cus_core.grader import Grader, MockGrader, _parse_grader_response, _weighted_score
-from cus_core.models import Rubric, Stage, StageName, Task
+from cus.grader import Grader, MockGrader, _parse_grader_response, _weighted_score
+from cus.models import Rubric, Stage, StageName, Task
 
 
 def _task() -> Task:

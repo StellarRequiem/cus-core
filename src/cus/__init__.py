@@ -14,10 +14,10 @@ Public API:
     load_task         — parse a YAML task definition into a Task object
 """
 
-from cus_core.audit import AuditChain, AuditEvent
-from cus_core.grader import Grader
-from cus_core.models import GradeResult, Rubric, Stage, StageResult, Task
-from cus_core.task_loader import load_task
+from cus.audit import AuditChain, AuditEvent
+from cus.grader import Grader
+from cus.models import GradeResult, Rubric, Stage, StageResult, Task
+from cus.task_loader import load_task
 
 __version__ = "0.1.0"
 

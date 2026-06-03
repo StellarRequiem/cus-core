@@ -38,8 +38,11 @@ Repository = "https://github.com/StellarRequiem/cus-core"
 Issues = "https://github.com/StellarRequiem/cus-core/issues"
 
 [build-system]
-requires = ["uv_build>=0.5"]
-build-backend = "uv_build"
+requires = ["hatchling>=1.21"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/cus"]
 
 [tool.ruff]
 line-length = 100

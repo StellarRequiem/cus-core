@@ -32,7 +32,7 @@ from typing import Any
 
 import yaml
 
-from cus_core.models import Task
+from cus.models import Task
 
 
 def load_task(path: str | Path) -> Task:

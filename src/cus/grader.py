@@ -18,7 +18,7 @@ import re
 from abc import ABC, abstractmethod
 from typing import Any
 
-from cus_core.models import GradeResult, Stage, StageResult, Task
+from cus.models import GradeResult, Stage, StageResult, Task
 
 
 GRADER_PROMPT_TEMPLATE = """You are a grader. Evaluate the agent's output against the task contract.

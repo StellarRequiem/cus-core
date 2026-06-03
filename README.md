@@ -17,14 +17,20 @@ and by other projects that want the same evaluation discipline.
 
 ## Install
 
+Not yet on PyPI — install from GitHub:
+
 ```bash
-uv add cus-core                    # base package
-uv add "cus-core[ollama]"          # + local grading via Ollama
-uv add "cus-core[anthropic]"       # + frontier grading via the Anthropic API
-uv add "cus-core[dev]"             # + pytest, ruff, mypy for contributors
+pip install "git+https://github.com/StellarRequiem/cus-core"
+
+# with extras — local Ollama grading / Anthropic grading / dev tools:
+pip install "cus-core[ollama] @ git+https://github.com/StellarRequiem/cus-core"
+pip install "cus-core[anthropic] @ git+https://github.com/StellarRequiem/cus-core"
+
+# or with uv:
+uv add "git+https://github.com/StellarRequiem/cus-core"
 ```
 
-Requires Python 3.11+.
+Requires Python 3.11+. (PyPI release planned.)
 
 ---
 
