@@ -147,11 +147,11 @@ Tampering with any entry invalidates every subsequent hash.
 
 ---
 
-## How `forest` uses this
+## How `forest` could adopt this (not yet wired)
 
-`forest`'s own `core/grading_engine.py` currently implements a flat
-4-factor rubric (compliance / usefulness / efficiency / novelty). The
-migration plan is:
+`forest` does **not** import `cus-core` today — its `core/grading_engine.py`
+implements its own flat 4-factor rubric (compliance / usefulness / efficiency /
+novelty). If adopted, the migration plan would be:
 
 1. Add `cus-core` as a dependency of forest.
 2. Define each worker's grading as a cus Task (one stage, four rubrics).
