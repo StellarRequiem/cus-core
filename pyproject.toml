@@ -1,7 +1,7 @@
 [project]
 name = "cus-core"
 version = "0.1.0"
-description = "Caste Unity System — agent grading framework with intent-adherence scoring and expected-failure rewards"
+description = "Contract Under Scrutiny — agent grading framework with intent-adherence scoring and expected-failure rewards"
 readme = "README.md"
 requires-python = ">=3.11"
 license = { text = "Apache-2.0" }

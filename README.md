@@ -1,6 +1,6 @@
 # cus-core
 
-**Caste Unity System — a grading framework for agent outputs.**
+**cus-core — Contract Under Scrutiny: a grading framework for agent outputs.**
 
 cus-core scores whether an agent adhered to the operator's declared intent,
 not just whether it produced something that looks right. Tasks are declared

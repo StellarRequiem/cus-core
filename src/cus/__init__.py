@@ -1,5 +1,5 @@
 """
-cus-core — Caste Unity System
+cus-core — Contract Under Scrutiny
 
 A grading framework for agent outputs that scores adherence to declared intent,
 including rewarding correctly-predicted failures.

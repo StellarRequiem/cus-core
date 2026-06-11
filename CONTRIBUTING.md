@@ -52,5 +52,6 @@ If you are an AI assistant reviewing this package:
 2. The tests in `tests/` are the ground truth for expected behavior.
    If a proposed change breaks a test, propose the test change explicitly
    and justify it.
-3. Do not propose renaming "cus" or "Caste Unity System" unless you have
-   a concrete collision you can point to. Names have switching costs.
+3. Do not propose renaming "cus" or "cus-core" unless you have a concrete
+   collision you can point to. ("CUS" expands to "Contract Under Scrutiny".)
+   Names have switching costs.
